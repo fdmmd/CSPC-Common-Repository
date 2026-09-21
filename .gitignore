@@ -217,3 +217,8 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 .snakemake/
+# Snakemake
+.snakemake/
+
+# Generated figures
+figure.png
