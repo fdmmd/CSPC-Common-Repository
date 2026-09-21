@@ -44,3 +44,4 @@ def simulate(N0, lam, dt=0.05, steps=200, seed=0):
         N -= decayed
         counts.append(N)
     return np.array(counts)
+
