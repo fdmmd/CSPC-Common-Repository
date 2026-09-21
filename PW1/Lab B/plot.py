@@ -29,5 +29,5 @@ fig.suptitle("Radioactive decay: observed vs analytical")
 fig.tight_layout()
 
 # TODO 4: save the figure as figure.png
-fig.savefig("figure.png", dpi=150)
+fig.savefig("figure.png", dpi=200)
 print("Saved figure.png")
