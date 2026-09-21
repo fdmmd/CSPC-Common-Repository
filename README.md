@@ -43,3 +43,26 @@ pytest -v
 ---
 
 <!-- Future sessions: add a new "## PW<n> — Lab <X>" section below. -->
+---
+
+## PW1 - Lab B: Real Data and a Snakemake Pipeline
+
+**What I built:**
+Read a real radioactive-decay dataset (`decay_observed.csv`), compared it to the
+analytical law N0·exp(-λt) with a side-by-side plot, and automated the figure
+with a small Snakemake pipeline.
+
+**What the data showed:**
+The observed points follow the analytical decay curve closely — the decay
+matches the exponential law well over the whole time range, with only small
+statistical fluctuations around the curve.
+
+**Pipeline:**
+The `Snakefile` defines a rule that builds `figure.png` from
+`decay_observed.csv` by running `plot.py`. Running
+`snakemake --cores 1 figure.png` rebuilds the figure only when an input
+changes, so the pipeline stays consistent.
+
+**Conclusion:**
+The real data confirms the analytical decay law. Snakemake makes the workflow
+reproducible: one command rebuilds exactly what is out of date, nothing more.
